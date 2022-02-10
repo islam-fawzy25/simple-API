@@ -1,0 +1,29 @@
+{
+  "name": "api-knowledge-cjspyz",
+  "version": "1.0.0",
+  "description": "Your objective is to implement a simple API for a school's homework submission platform that enables students to submit their homework and teachers to grade students' submissions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "server": "nodemon ./server/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://learningbank-yiiqyu@git.codesubmit.io/learningbank/api-knowledge-cjspyz"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "knex": "^1.0.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.0"
+  }
+}
