@@ -54,7 +54,7 @@ router.post("/:id", async (req, res) => {
       teacher_id: null,
       student_id: studentId,
       studenName: studentData.name,
-      assignmentName: req.body.subject,
+      assignmentName: req.body.assignmentName,
       submissionDate: new Date(),
       file: req.body.file,
       grading: null,

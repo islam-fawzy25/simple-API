@@ -3,9 +3,7 @@ const chai =require("chai")
 const chaiHttp = require("chai-http")
 
 chai.use(chaiHttp)
- chai.should();
-
-
+chai.should();
 
 describe("Teachers API",()=>{
     it("It should GET all homework all students",(done)=>{
@@ -13,7 +11,7 @@ describe("Teachers API",()=>{
         .get("/api/teachers/")
         .end((err,res)=>{
             res.should.have.status(200)
-            res.body.should.be.a("array")
+            res.body.should.be.a("Array")
             done();
         })   
     })
@@ -29,8 +27,14 @@ describe("Teachers API",()=>{
         .put("/api/teachers/2?homeworkId=5")
         .send(gradeHomework)
         .end((err,res)=>{
+            gradeHomework.finalGrade.should.be.a('string')
+            gradeHomework.teacherNotes.should.be.a('string')
             res.should.have.status(201)
-            res.body.should.be.a("array")
+            res.body.should.have.property('teacher_id')
+            res.body.should.have.property('grading')
+            res.body.should.have.property('finalGrade')
+            res.body.should.have.property('teacherNotes')
+            res.body.should.be.a("Object")
             done();
         })   
     })

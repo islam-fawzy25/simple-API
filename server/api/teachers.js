@@ -67,8 +67,8 @@ router.put("/:id", async (req, res) => {
         if (isFoundHomeWork) {
             isFoundHomeWork.teacher_id = teacherId;
             isFoundHomeWork.grading = new Date();
-            isFoundHomeWork.finalGrade = req.body.grade;
-            isFoundHomeWork.teacherNotes = req.body.notes;
+            isFoundHomeWork.finalGrade = req.body.finalGrade;
+            isFoundHomeWork.teacherNotes = req.body.teacherNotes;
             res.status(201).json(isFoundHomeWork)
             return
         }
